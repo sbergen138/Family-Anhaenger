@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: trailer-calendar
+    env: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: ACCESS_CODE
+        sync: false
+      - key: MONTHS_AHEAD
+        value: "12"
